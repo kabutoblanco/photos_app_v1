@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class='container-fluid py-4'>
+        <div class='row'>
+            <div class='col-xs-12 col-md-8'>
+                <img class='detail' width='100%' src={{photo.urls.regular}} />
+                {% include "photos/favorite.html" with photo=photo detail=True %}
+            </div>
+            <div class='col-xs-12 col-md-4'>
+                <div class='custom-container p-2'>
+                    <div class='user-info mb-2'>
+                        <div class='d-flex justify-content-center m-2'>
+                        <img
+                            class='user-profile'
+                            src={{photo.user.profile_image.large}}
+                            height='150px'
+                        />
+                        </div>
+                        <div class='list-group'>
+                            <div class='list-group-item'>
+                                User: {{photo.user.first_name}} {{photo.user.last_name}}
+                            </div>
+                            <div class='list-group-item'>
+                                Location: {{photo.user.location}}
+                            </div>
+                        </div>
+                    </div>
+                    <div className='image-info'>
+                        <div class='list-group'>
+                            <div class='list-group-item'>Date: {{photo.created_at}}</div>
+                            <div class='list-group-item'>Likes: {{photo.likes}}</div>
+                            <div class='list-group-item'>Description: {{photo.description}}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

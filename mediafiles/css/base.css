@@ -1,0 +1,47 @@
+.message {
+  position: fixed;
+  z-index: 999;
+  top: 10px;
+  margin: auto 50%;
+}
+
+.navbar {
+  position: sticky !important;
+  top: 0;
+  z-index: 99;
+}
+
+.favorite {
+  object-fit: cover;
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  border-radius: 50px;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.detail {
+  object-fit: cover;
+  height: 500px;
+}
+
+.favorite:hover {
+  cursor: pointer;
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.center .card-img-top {
+  object-fit: cover;
+  height: 300px;
+  border-radius: calc(0.25rem - 1px);
+}
+
+.custom-container {
+  background: rgb(90 82 82 / 50%);
+}
+
+.custom-container img {
+  border-radius: 50px;
+}

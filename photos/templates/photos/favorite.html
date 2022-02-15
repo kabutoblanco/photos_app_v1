@@ -1,0 +1,16 @@
+<div class='favorite' style={% if detail %} 'right:28px' {% endif %}>
+    <img
+    id={{photo.id_unsplash}}
+    src={% if photo.favorite %} '/static/img/star_1.png'
+        {% else %} '/static/img/star_2.png'
+        {% endif %}
+    width='50'
+    height='50'
+    onclick=
+    {% if photo.favorite %}
+        {{'onUnfavorite("'|add:photo.id_unsplash|add:'","'|add:photo.preview|add:'")'}}
+    {% else %}
+        {{'onFavorite("'|add:photo.id_unsplash|add:'","'|add:photo.preview|add:'")'}}
+    {% endif %}
+    />
+</div>
