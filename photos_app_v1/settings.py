@@ -27,7 +27,7 @@ CLIENT_ID = config('CLIENT_ID')
 API_UNSPLASH = config('API_UNSPLASH')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
